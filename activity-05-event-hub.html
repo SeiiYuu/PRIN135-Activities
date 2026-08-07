@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Event Hub</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #212529;
+    }
+    header {
+      background-color: #1b1f3b;
+      color: white;
+      padding: 20px 40px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #cfd2f5;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+    nav a:hover {
+      color: white;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 2.3fr 1fr;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+    section#events h2 {
+      color: #1b1f3b;
+      border-bottom: 3px solid #f4a261;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    article.event {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 18px;
+    }
+    article.event figure {
+      margin: 0;
+      flex-shrink: 0;
+    }
+    article.event img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    article.event .event-body h3 {
+      margin: 0 0 6px 0;
+      color: #1b1f3b;
+    }
+    article.event .event-body time {
+      display: block;
+      color: #f4a261;
+      font-weight: bold;
+      font-size: 0.85em;
+      margin-bottom: 8px;
+    }
+    article.event .event-body p {
+      margin: 0 0 10px 0;
+      color: #4a4e6a;
+      font-size: 0.92em;
+    }
+    article.event footer {
+      background: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      font-size: 0.8em;
+      color: #7a7d99;
+    }
+    aside {
+      background-color: #1b1f3b;
+      color: #e4e6f5;
+      border-radius: 10px;
+      padding: 20px;
+      height: fit-content;
+    }
+    aside h2 {
+      color: #f4a261;
+      font-size: 1.1em;
+      margin-top: 0;
+    }
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    aside li {
+      padding: 10px 0;
+      border-bottom: 1px solid #33375c;
+      font-size: 0.9em;
+    }
+    aside li:last-child {
+      border-bottom: none;
+    }
+    footer.site-footer {
+      background-color: #14172c;
+      color: #9598bd;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-row">
+      <h1>&#128197; Campus Event Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#calendar">Calendar</a></li>
+          <li><a href="#submit">Submit an Event</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <section id="events">
+      <h2>Upcoming Events</h2>
+
+      <article class="event">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=200" alt="Students at a tech workshop">
+        </figure>
+        <div class="event-body">
+          <time datetime="2026-08-15">August 15, 2026 &middot; 2:00 PM</time>
+          <h3>Intro to Web Development Workshop</h3>
+          <p>A hands-on beginner workshop covering HTML, CSS, and JavaScript basics. Laptops provided.</p>
+          <footer>
+            <span>&#128205; Computer Lab 3</span>
+            <span>&#128101; 45 attending</span>
+          </footer>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=200" alt="Students at a career fair">
+        </figure>
+        <div class="event-body">
+          <time datetime="2026-08-20">August 20, 2026 &middot; 9:00 AM</time>
+          <h3>Fall Career Fair</h3>
+          <p>Meet recruiters from over 30 companies across tech, finance, and design.</p>
+          <footer>
+            <span>&#128205; Main Gymnasium</span>
+            <span>&#128101; 320 attending</span>
+          </footer>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=200" alt="Outdoor music festival crowd">
+        </figure>
+        <div class="event-body">
+          <time datetime="2026-08-28">August 28, 2026 &middot; 5:00 PM</time>
+          <h3>Battle of the Bands</h3>
+          <p>Student bands compete for a chance to open at the fall welcome concert.</p>
+          <footer>
+            <span>&#128205; Quad Amphitheater</span>
+            <span>&#128101; 210 attending</span>
+          </footer>
+        </div>
+      </article>
+    </section>
+
+    <aside id="calendar">
+      <h2>This Week</h2>
+      <ul>
+        <li><strong>Mon:</strong> Study Group &ndash; Library Rm 2</li>
+        <li><strong>Wed:</strong> Yoga on the Lawn</li>
+        <li><strong>Thu:</strong> Web Dev Workshop</li>
+        <li><strong>Fri:</strong> Movie Night &ndash; Student Union</li>
+        <li><strong>Sat:</strong> Career Fair</li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2026 Campus Event Hub &mdash; Built with semantic HTML5
+  </footer>
+
+</body>
+</html>

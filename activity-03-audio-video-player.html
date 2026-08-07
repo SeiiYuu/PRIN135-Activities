@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Player - Audio &amp; Video</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #14151a;
+      color: #eaeaea;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+    header h1 {
+      margin: 0;
+      color: #ffffff;
+    }
+    header p {
+      color: #9a9ba5;
+    }
+    main {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .player-card {
+      background-color: #1e1f27;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .player-card h2 {
+      margin-top: 0;
+      color: #7dd3c0;
+      font-size: 1.2em;
+      border-bottom: 1px solid #2c2d38;
+      padding-bottom: 10px;
+    }
+    video {
+      width: 100%;
+      border-radius: 8px;
+      background-color: #000;
+      display: block;
+    }
+    audio {
+      width: 100%;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85em;
+      color: #9a9ba5;
+      margin-top: 10px;
+    }
+    .track-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+    .track-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #2c2d38;
+      color: #c4c5cf;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #6c6d78;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Media Player</h1>
+    <p>A simple page demonstrating the native HTML &lt;video&gt; and &lt;audio&gt; elements</p>
+  </header>
+
+  <main>
+
+    <section class="player-card">
+      <h2>Video Player</h2>
+      <video controls poster="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.jpg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="meta">
+        <span>Now Playing: Flower Time-lapse</span>
+        <span>Format: MP4 / WEBM</span>
+      </div>
+    </section>
+
+    <section class="player-card">
+      <h2>Audio Player</h2>
+      <audio controls>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+      <div class="meta">
+        <span>Now Playing: T-Rex Roar (sound effect)</span>
+        <span>Format: MP3</span>
+      </div>
+    </section>
+
+    <section class="player-card">
+      <h2>About This Player</h2>
+      <p>
+        This page uses the native <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> HTML5 elements,
+        each with the <code>controls</code> attribute so the browser shows built-in play, pause, volume,
+        and seek controls &mdash; no JavaScript required. Multiple <code>&lt;source&gt;</code> tags are used
+        inside the video element so the browser can pick whichever format it supports.
+      </p>
+      <ul class="track-list">
+        <li>&#9654; Video source: MP4 and WEBM fallback formats</li>
+        <li>&#9654; Audio source: MP3 format</li>
+        <li>&#9654; Poster image shown before the video starts playing</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    Media files courtesy of MDN's public interactive examples library.
+  </footer>
+
+</body>
+</html>

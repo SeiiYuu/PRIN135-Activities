@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Clips - Video Compilation</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f6f5;
+      color: #24302a;
+      margin: 0;
+    }
+    header {
+      background-color: #2f5233;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+    }
+    header p {
+      margin: 0;
+      color: #d3e4d6;
+    }
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .video-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .video-card video {
+      width: 100%;
+      display: block;
+      background-color: #000;
+    }
+    .video-card .info {
+      padding: 15px 18px;
+    }
+    .video-card h3 {
+      margin: 0 0 6px 0;
+      color: #2f5233;
+    }
+    .video-card p {
+      margin: 0;
+      font-size: 0.9em;
+      color: #5b6a5d;
+    }
+    .tag {
+      display: inline-block;
+      background-color: #dcebd9;
+      color: #2f5233;
+      font-size: 0.75em;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-top: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #7c8a7e;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nature Clips Compilation</h1>
+    <p>A short collection of nature video clips, each with its own embedded player</p>
+  </header>
+
+  <main>
+    <div class="grid">
+
+      <div class="video-card">
+        <video controls poster="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.jpg">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="info">
+          <h3>Blooming Flower</h3>
+          <p>A close-up time-lapse of a flower opening in the morning light.</p>
+          <span class="tag">Time-lapse</span>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls>
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="info">
+          <h3>Weekend Walk</h3>
+          <p>A casual outdoor clip capturing a relaxed afternoon stroll.</p>
+          <span class="tag">Lifestyle</span>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls>
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bigbuckbunny.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="info">
+          <h3>Big Buck Bunny (clip)</h3>
+          <p>An excerpt from the open-source animated short film.</p>
+          <span class="tag">Animation</span>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls>
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/coffee.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="info">
+          <h3>Morning Coffee</h3>
+          <p>A calm, close-up shot of coffee being poured.</p>
+          <span class="tag">Ambient</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    Each clip uses its own independent &lt;video&gt; element and controls. Sample clips courtesy of MDN's public interactive examples library.
+  </footer>
+
+</body>
+</html>
