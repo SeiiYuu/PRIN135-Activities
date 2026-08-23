@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia Player</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(160deg, #1a1c2c, #0d0e18);
+      color: #f0f0f5;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .player-app {
+      width: 100%;
+      max-width: 900px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    p.subtitle {
+      text-align: center;
+      color: #9294b8;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .main-stage {
+      background-color: #14152a;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+      margin-bottom: 30px;
+    }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .tabs button {
+      background-color: #1f2140;
+      border: none;
+      color: #b6b8db;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+    .tabs button.active {
+      background-color: #7c5cff;
+      color: white;
+    }
+    video, audio {
+      width: 100%;
+      border-radius: 10px;
+      background-color: black;
+    }
+    .now-playing {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      color: #b6b8db;
+      font-size: 0.9em;
+    }
+    .now-playing strong {
+      color: #f0f0f5;
+    }
+    .playlist {
+      background-color: #14152a;
+      border-radius: 14px;
+      padding: 10px;
+    }
+    .playlist h2 {
+      font-size: 1em;
+      color: #9294b8;
+      padding: 10px 15px 5px;
+      margin: 0;
+    }
+    .track {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .track:hover {
+      background-color: #1f2140;
+    }
+    .track img {
+      width: 45px;
+      height: 45px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .track .track-info {
+      flex: 1;
+    }
+    .track .track-info p {
+      margin: 0;
+      font-size: 0.92em;
+    }
+    .track .track-info span {
+      font-size: 0.78em;
+      color: #8688ab;
+    }
+    .track .duration {
+      font-size: 0.8em;
+      color: #8688ab;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player-app">
+    <h1>&#127925; Multimedia Player</h1>
+    <p class="subtitle">Video and audio, one player, native HTML5 controls</p>
+
+    <div class="main-stage">
+      <div class="tabs">
+        <button class="active" type="button">Video</button>
+        <button type="button">Audio</button>
+      </div>
+
+      <video controls poster="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.jpg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="now-playing">
+        <span>Now Playing: <strong>Flower Time-lapse</strong></span>
+        <span>02:15</span>
+      </div>
+    </div>
+
+    <div class="playlist">
+      <h2>Up Next</h2>
+
+      <div class="track">
+        <img src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.jpg" alt="Flower thumbnail">
+        <div class="track-info">
+          <p>Flower Time-lapse</p>
+          <span>Nature Clips</span>
+        </div>
+        <span class="duration">2:15</span>
+      </div>
+
+      <div class="track">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100" alt="Weekend clip thumbnail">
+        <div class="track-info">
+          <p>Weekend Walk</p>
+          <span>Lifestyle Clips</span>
+        </div>
+        <span class="duration">1:42</span>
+      </div>
+
+      <div class="track">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=100" alt="Coffee clip thumbnail">
+        <div class="track-info">
+          <p>Morning Coffee</p>
+          <span>Ambient Clips</span>
+        </div>
+        <span class="duration">0:58</span>
+      </div>
+
+      <div class="track">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100" alt="Audio track thumbnail">
+        <div class="track-info">
+          <p>T-Rex Roar (sound effect)</p>
+          <span>Audio &middot; MP3</span>
+        </div>
+        <span class="duration">0:04</span>
+      </div>
+
+      <div style="padding: 10px 15px;">
+        <audio controls style="width:100%;">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
